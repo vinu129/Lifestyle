@@ -19,6 +19,7 @@
     padding: 20px;
     font-size: 15px;
     color: $white;
+    width: 100%;
     &:hover {
         color: $primary;
         background-color: $white;
@@ -27,7 +28,7 @@
 }
 
 //input controls
-.form-control {
+.quantity {
     padding: 20px;
     border: 1px solid $secondary;
     text-align: center;

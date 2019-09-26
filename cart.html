@@ -17,14 +17,22 @@ Created by-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Link to css -->
     <link rel="stylesheet" href="./assets/css/styles.min.css">
+    <style>
+     .top-nav {
+
+    position: relative;     
+}
+    </style>
 </head>
 
 <body>
+    <!-- Header here -->
+    <div id="header"></div>
     <!-- Main-wrapper -->
     <section id="main-wrapper">
         <!-- Content-header -->
         <div class="content-header">
-            <div class="title">my cart</div>
+            <div class="header-title">my cart</div>
             <div class="breadcrumbs">
                 <span class="breadcrumb-title">home</span>
                 <span class="breadcrumb-title active">cart</span>
@@ -66,7 +74,7 @@ Created by-
                                     <h4 class="cart-price">$4.90</h4>
                                 </td>
                                 <td class="data-table-items">
-                                    <input type="number" value="1" class="form-control">
+                                    <input type="number" value="1" class="quantity">
                                 </td>
                                 <td class="data-table-items">
                                     <h4 class="cart-price">$4.90</h4>
@@ -90,7 +98,7 @@ Created by-
                                     <h4 class="cart-price">$4.90</h4>
                                 </td>
                                 <td class="data-table-items">
-                                    <input type="number" value="1" class="form-control">
+                                    <input type="number" value="1" class="quantity">
                                 </td>
                                 <td class="data-table-items">
                                     <h4 class="cart-price">$4.90</h4>
@@ -133,6 +141,13 @@ Created by-
         <!-- End: Content-wrapper -->
     </section>
     <!-- End : Main-wrapper -->
+    <!-- Footer here -->
+    <div id="footer"></div>
+    
+    <!-- link to jquery -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Link to javascript -->
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
