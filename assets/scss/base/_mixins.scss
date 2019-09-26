@@ -1,4 +1,3 @@
-
 // display flex properties
 @mixin flex($flex-direction: row, $align-items: flex-start, $justify-content: flex-start) {
   display: flex;
@@ -13,10 +12,10 @@
 }
 // media queries for responsive designs
 @mixin media-query($screen-size) {
-  $screen: map-get($breakpoints, quote($screen-size));
-  @media (max-width: $screen) {
-    @content;
-  }
+    $screen: map-get($breakpoints, quote($screen-size));
+    @media (max-width: $screen) {
+        @content;
+    }
 }
 
 //position properties 
