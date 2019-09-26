@@ -4,8 +4,6 @@
     background-color: $secondary;
     overflow: auto;
     .row{
-        margin-left: -15px;
-        margin-right: -15px;
         @include flex(row, null, center);
         flex-wrap: wrap;
     }
