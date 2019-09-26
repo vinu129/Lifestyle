@@ -5,10 +5,12 @@
 }
 html,
 body {
-  @extend %wh-100;
-  font-family: "Montserrat", sans-serif;
-  overflow: hidden;
+  @include wh(100%,auto);
+  font-family: $font-base;
+  
 }
+
+// Reset properties
 a {
   text-decoration: none;
 }
@@ -19,11 +21,26 @@ input[type="radio"] {
   display: none;
 }
 
-
 input {
   outline: 0;
 }
 label,
 button {
   cursor: pointer;
+}
+
+#main-wrapper {
+  @include wh(100%,auto);
+    // overflow: auto;
+}
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    // width: 100%; 
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+   background-color: $white;
+
+
 }
