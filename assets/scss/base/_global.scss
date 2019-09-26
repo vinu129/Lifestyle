@@ -1,29 +1,37 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 html,
 body {
-  @extend %wh-100;
-  font-family: "Montserrat", sans-serif;
-  overflow: hidden;
+    @include wh;
+    font-family: $font-base;
 }
+
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
-input[type="checkbox"] {
-  display: none;
-}
+
+input[type="checkbox"],
 input[type="radio"] {
-  display: none;
+    display: none;
 }
 
-
-input {
-  outline: 0;
+// img {
+//     max-width: 100%;
+// }
+input,
+button {
+    outline: 0;
 }
+
 label,
 button {
-  cursor: pointer;
+    cursor: pointer;
+}
+
+#main-wrapper {
+    @include wh;
 }

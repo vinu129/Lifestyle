@@ -1,0 +1,30 @@
+//button css
+.btn {
+    border: 1px solid transparent;
+    background-color: transparent;
+    outline: 0;
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: $primary;
+    border-radius: 35px;
+    padding: 20px;
+    font-size: 15px;
+    color: $white;
+    &:hover {
+        color: $primary;
+        background-color: $white;
+        border: 1px solid $primary;
+    }
+}
+
+//input controls
+.form-control {
+    padding: 20px;
+    border: 1px solid $secondary;
+    text-align: center;
+    font-size: 15px;
+    color: $dark;
+    font-family: $font-base;
+}
