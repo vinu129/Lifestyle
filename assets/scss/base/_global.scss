@@ -6,9 +6,8 @@
 
 html,
 body {
-  @include wh(100%,auto);
+  @include wh(100%, auto);
   font-family: $font-base;
-  
 }
 
 // Reset properties
@@ -31,17 +30,14 @@ button {
 }
 
 #main-wrapper {
-  @include wh(100%,auto);
-  
+  @include wh(100%, auto);
 }
 .fixed-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    // width: 100%; 
-    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
-   background-color: $white;
-
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  // width: 100%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  background-color: $white;
 }
