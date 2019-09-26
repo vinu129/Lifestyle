@@ -1,11 +1,12 @@
 
 // display flex properties
-@mixin flex($display: flex, $flex-direction: row, $align-items: flex-start, $justify-content: flex-start) {
-  display: $display;
+@mixin flex($flex-direction: row, $align-items: flex-start, $justify-content: flex-start) {
+  display: flex;
   flex-direction: $flex-direction;
   align-items: $align-items;
   justify-content: $justify-content;
 }
+
 // media queries for responsive designs
 @mixin media-query($screen-size) {
   $screen: map-get($breakpoints, quote($screen-size));
@@ -14,6 +15,7 @@
   }
 }
 
+//position properties 
 @mixin position($position: relative, $top: "", $right: "", $bottom: "", $left: "") {
   position: $position;
   top: $top;

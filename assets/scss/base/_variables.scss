@@ -1,5 +1,6 @@
 // ----------- Variables ----------//
 $font-base: 'Open Sans', sans-serif;
+
 // ----------- Maps ----------//
 $breakpoints: (
   "xl": 1200px,
@@ -8,3 +9,6 @@ $breakpoints: (
   "sm": 576px,
   "xs": 320px
 );
+
+// ----------- Font-size ----------//
+$font-size: 1rem;

@@ -1,0 +1,78 @@
+<!--
+    Created by: Monica Mehta
+    Date: 24/09/2019
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Details</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Link to css -->
+    <link rel="stylesheet" href="./assets/css/styles.min.css">
+</head>
+
+<body>
+    <!-- Product-Details -->
+    <div id="product-details-wrapper" class="product-details-wrapper">
+        <!-- Row -->
+        <div class="row">
+            <!-- Col -->
+            <div class="col">
+                <!-- Product-Image -->
+                <div class="product-image">
+                    <img src="./assets/images/women-clothing2.jpg" class="p-img" alt="product-1">
+                </div>
+                <!-- End: Product-Image -->
+            </div>
+            <!-- End: Col -->
+            <!-- Col -->
+            <div class="col">
+                <!-- Product-Description -->
+                <div class="product-description">
+                    <h2 class="product-name">WOMEN STRIPPED JUMPSUIT</h2>
+                    <div class="price">$110</div>
+                    <p class="p-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sequi? Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Error architecto debitis sapiente adipisci, maxime repellendus rerum
+                        numquam veritatis id sit, sequi placeat officiis repellat nulla laboriosam quam, quisquam magni nostrum.</p>
+                    <p class="p-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sequi? Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Error architecto debitis sapiente adipisci, maxime repellendus rerum
+                        </p>
+                    <div class="select-size">
+                        <span>Size: </span>
+                        <select id="mySelect" class="select-block">
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                            <option value="xtra-large">Extra Large</option>
+                        </select>
+                    </div>
+                    <div class="quantity">
+                        <span>Quantity: </span>
+                        <input type="number" min="1" max="9" step="1" value="1" class="qty">
+                    </div>
+                    <div class="cart">
+                        <a href="#" class="add-btn">Add to Cart</a>
+                    </div>
+                </div>
+                <!-- End: Product-Description -->
+            </div>
+            <!-- End: Col -->
+        </div>
+        <!-- End: Row -->
+    </div>
+    <!-- End: Product-Details -->
+
+     <!-- Script -->
+     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+     <!-- End: Script -->
+</body>
+
+</html>

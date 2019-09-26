@@ -3,18 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html,
 body {
   @extend %wh-100;
-  font-family: "Montserrat", sans-serif;
-  overflow: hidden;
+  font-family: $font-base;
+  // overflow: hidden;
 }
+
 a {
   text-decoration: none;
 }
+
 input[type="checkbox"] {
   display: none;
 }
+
 input[type="radio"] {
   display: none;
 }
@@ -23,7 +27,12 @@ input[type="radio"] {
 input {
   outline: 0;
 }
+
 label,
 button {
   cursor: pointer;
+}
+
+img{
+  max-width: 100%;
 }

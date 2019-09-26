@@ -1,17 +1,19 @@
 {
     "version": 3,
-    "mappings": "AIAA,AAAA,CAAC,AAAC,CACA,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CACV,UAAU,CAAE,UAAU,CACvB,AACD,AAAA,IAAI,CACJ,IAAI,AAAC,CAEH,WAAW,CAAE,wBAAwB,CACrC,QAAQ,CAAE,MAAM,CACjB,AACD,AAAA,CAAC,AAAC,CACA,eAAe,CAAE,IAAI,CACtB,AACD,AAAA,KAAK,CAAA,AAAA,IAAC,CAAK,UAAU,AAAf,CAAiB,CACrB,OAAO,CAAE,IAAI,CACd,AACD,AAAA,KAAK,CAAA,AAAA,IAAC,CAAK,OAAO,AAAZ,CAAc,CAClB,OAAO,CAAE,IAAI,CACd,AAGD,AAAA,KAAK,AAAC,CACJ,OAAO,CAAE,CAAC,CACX,AACD,AAAA,KAAK,CACL,MAAM,AAAC,CACL,MAAM,CAAE,OAAO,CAChB,AAvBD,ACLA,IDKI,CACJ,IAAI,ACNI,CACN,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACb",
+
     "sources": [
         "../scss/styles.scss",
         "../scss/base/_index.scss",
         "../scss/base/_colors.scss",
         "../scss/base/_variables.scss",
+        "../scss/base/_mixins.scss",
         "../scss/base/_global.scss",
         "../scss/base/_placeholder.scss",
-        "../scss/base/_mixins.scss",
         "../scss/components/_index.scss",
-        "../scss/layout/_index.scss",
-        "../scss/utilities/_index.scss"
+
+        "../scss/layout/product/_index.scss",
+        "../scss/layout/product-details/_index.scss",
+
     ],
     "names": [],
     "file": "styles.min.css"
