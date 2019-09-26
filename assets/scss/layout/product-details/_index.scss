@@ -1,7 +1,7 @@
 // Product-details style goes here
 .product-details-wrapper{
     padding: 150px 80px;
-    background-color: $secondary;
+    background-color: lighten($secondary,10%);
     overflow: auto;
     @include media-query(sm){
         padding: 60px;

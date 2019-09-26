@@ -1,7 +1,7 @@
 //product style goes here
 .main-wrapper{
     padding: 150px 0;
-    background-color: $secondary;
+    background-color: lighten($secondary,10%);
     overflow: auto;
     .row{
         @include flex(row, null, center);

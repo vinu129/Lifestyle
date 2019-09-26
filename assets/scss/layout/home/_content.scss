@@ -1,30 +1,13 @@
 .site-content {
   @include wh;
 }
-#home-page {
-  @include wh(100%, 100vh);
-  @include flex(column);
-  flex-shrink: 0;
-  position: relative;
-  background-color: $secondary;
-  background-image: url("../images/main-bg.webp");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-
-  &::before {
-    content: "";
-    @include position(absolute, 0, " ", " ", 0);
-    @include wh(50%, 100%);
-    background-color: rgba($primary, 0.9);
-  }
-
-  .top-nav {
+ .top-nav {
     @include wh(100%, $nav-height);
     @include flex(row, center);
     transition: 0.3s all ease-in-out;
     z-index: 2;
+    // background-color: transparent;
+    position: fixed;
     .brand-name {
       margin-left: 15%;
       text-transform: uppercase;
@@ -46,6 +29,7 @@
         top: 60px;
         background-color: #fff;
         height: auto;
+        display: none;
       }
     }
     .nav-link {
@@ -91,6 +75,26 @@
       }
     }
   }
+#home-page {
+  @include wh(100%, 100vh);
+  @include flex(column);
+  flex-shrink: 0;
+  position: relative;
+  background-color: $secondary;
+  background-image: url("../images/main-bg.webp");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    @include position(absolute, 0, " ", " ", 0);
+    @include wh(50%, 100%);
+    background-color: rgba($primary, 0.9);
+  }
+
+ 
   .main-content {
     @include wh;
     @include flex(column, center, center);
@@ -99,12 +103,12 @@
     padding-bottom: 50px;
     font-family: "Roboto Condensed", sans-serif;
     h1 {
-      font-size: 150px;
+      font-size: 6rem;
       text-transform: uppercase;
     }
     h2 {
       text-transform: uppercase;
-      font-size: 25px;
+      font-size: 1.2rem;
       letter-spacing: 4px;
       font-weight: 500;
       margin-top: 20px;
@@ -155,7 +159,7 @@
   justify-content: center;
 }
 .heading {
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: 400;
   position: relative;
   text-transform: uppercase;
@@ -164,26 +168,43 @@
 }
 .heading-shadow {
   position: absolute;
-  top: -90px;
-  left: 34%;
+  top: -49px;
+  left: 40%;
   right: 0;
-  font-size: 130px;
+  font-size: 5rem;
   color: rgba(0, 0, 0, 0.03);
   font-weight: 900;
+  @include media-query(sm) {
+    display: none;
+  }
 }
 
-#trending {
-  @include wh(100%, 100vh);
+#trending ,#products{
+  @include wh(100%, auto);
   @include flex(column, center, start);
 
   .col {
     margin: 0 30px;
+    &:nth-child(2) {
+      @include media-query(sm) {
+        display: none;
+      }
+    }
+    &:nth-child(3) {
+      @include media-query(lg) {
+        display: none;
+      }
+    }
   }
+
   .card {
     @include flex(column, null, null);
     width: 340px;
     background-color: $white;
     position: relative;
+    @include media-query(md) {
+      width: 280px;
+    }
   }
   .img-p {
     position: relative;
@@ -191,6 +212,9 @@
     height: 500px;
     width: 100%;
     overflow: hidden;
+    @include media-query(md) {
+      height: 400px;
+    }
     .product-img {
       height: 100%;
       width: 100%;
@@ -251,12 +275,26 @@
     }
   }
 }
+#products{
+  @include wh(100%,110vh);
+   background-color: lighten($secondary, 10%);
+   .view-btn{
+     margin-top: 50px;
+     padding: 10px 30px;
+   }
+}
 #about {
-  @include wh(100%, 100vh);
+  @include wh(100%, auto);
   @include flex(column, center, start);
   background-color: lighten($secondary, 10%);
-  .video-img {
-    @include wh(490px, 720px);
+  @include media-query(md) {
+    height: auto;
+  }
+  .row {
+    @include media-query(md) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   .video-player {
     position: relative;
@@ -273,16 +311,34 @@
       top: 43%;
       left: 41%;
     }
+    .video-img {
+      @include wh(490px, 720px);
+      @include media-query(md) {
+        @include wh(400px, 600px);
+      }
+      @include media-query(sm) {
+        @include wh(300px, 450px);
+      }
+    }
   }
-  .content-header {
-    font-size: 70px;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-family: "Roboto Condensed", sans-serif;
-  }
+
   .content {
     margin: 100px 0 0 60px;
     width: 30%;
+    @include media-query(md) {
+      width: 80%;
+      margin: 20px 0 0 0;
+    }
+    .content-header {
+      font-size: 70px;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-family: "Roboto Condensed", sans-serif;
+      @include media-query(md) {
+        text-align: center;
+        font-size: 50px;
+      }
+    }
     .content-body {
       margin-top: 30px;
       p {
@@ -294,10 +350,15 @@
     }
   }
 }
+
 #sale {
-  @include wh(100%, 70vh);
+  @include wh(100%, 80vh);
   @include flex(column, center, start);
   position: relative;
+  object-fit: cover;
+  @include media-query(md) {
+    height: 50vh;
+  }
   img {
     @include wh(100%, 100%);
   }
@@ -312,25 +373,50 @@
     width: 100%;
     bottom: 10%;
     text-align: center;
+    @include media-query(md) {
+      font-size: 3rem;
+    }
   }
 }
 #contact {
-  @include wh(100%, 80vh);
+  @include wh(100%, 100vh);
   @include flex(column, center, center);
   background-color: lighten($secondary, 10%);
+  @include media-query(md) {
+    height: auto;
+  }
   .row {
     width: 60%;
+    height: 80%;
     background-color: $white;
+    @include media-query(lg) {
+      width: 90%;
+     
+    }
+    @include media-query(md) {
+      @include flex(column);
+      @include wh(100%, auto);
+      margin: 20px;
+    }
 
     .col:first-child {
       padding: 50px;
+      @include media-query(sm) {
+        padding: 30px;
+      }
     }
   }
   .col {
     height: 100%;
     flex-basis: 50%;
-
     @include flex(column, center, center);
+    @include media-query(md) {
+      @include wh(100%, auto);
+      padding: 20px 50px;
+    }
+    @include media-query(sm) {
+      padding: 30px;
+    }
   }
   .contact-form {
     @include wh;
@@ -375,6 +461,9 @@
   }
   #map {
     @include wh;
+    @include media-query(md) {
+      height: 400px;
+    }
   }
 }
 #footer {
@@ -391,18 +480,21 @@
       border-radius: 50%;
       background-color: darken($secondary, 2%);
       @include flex(row, center, center);
-       border: 1px solid transparent;
+      border: 1px solid transparent;
       padding: 10px;
-      &:hover{
-        border: 1px solid darken($secondary,8%);
+      &:hover {
+        border: 1px solid darken($secondary, 8%);
       }
     }
   }
-  .copy-rights{
+  .copy-rights {
     margin-top: 50px;
     font-size: 14px;
-    .footer-icon{
-      color: darken($primary,15%);
+    @include media-query(md) {
+      text-align: center;
+    }
+    .footer-icon {
+      color: darken($primary, 15%);
       margin: 0 3px;
     }
   }

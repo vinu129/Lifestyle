@@ -27,10 +27,10 @@
 
 .form-container {
   @include flex(column, center, center);
-  @include position(absolute, 0, 0, 0, 50%);
+  @include position(absolute, 15%, 0, 0, 65%);
   background-color: rgba($white, 0.6);
-  padding: 100px;
-  margin: 50px 150px;
+  padding: 50px;
+  @include wh(25%,70%);
 
   @include media-query(lg) {
     @include position(absolute, 0, 0, 0, 0);
@@ -55,6 +55,7 @@
     width: 50px;
     color: #fff;
     mix-blend-mode: multiply;
+    margin-top: 45px;
   }
   .login-title {
     color: $dark;
