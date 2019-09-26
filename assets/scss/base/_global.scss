@@ -6,11 +6,12 @@
 
 html,
 body {
-  @extend %wh-100;
+  @include wh(100%,auto);
   font-family: $font-base;
-  // overflow: hidden;
+  
 }
 
+// Reset properties
 a {
   text-decoration: none;
 }
@@ -23,7 +24,6 @@ input[type="radio"] {
   display: none;
 }
 
-
 input {
   outline: 0;
 }
@@ -33,6 +33,18 @@ button {
   cursor: pointer;
 }
 
-img{
-  max-width: 100%;
+#main-wrapper {
+  @include wh(100%,auto);
+    // overflow: auto;
+}
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    // width: 100%; 
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+   background-color: $white;
+
+
 }

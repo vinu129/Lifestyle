@@ -6,7 +6,11 @@
   align-items: $align-items;
   justify-content: $justify-content;
 }
-
+// Height width
+@mixin wh($w:100%,$h:100%) {
+  width: $w;
+  height: $h;
+}
 // media queries for responsive designs
 @mixin media-query($screen-size) {
   $screen: map-get($breakpoints, quote($screen-size));
