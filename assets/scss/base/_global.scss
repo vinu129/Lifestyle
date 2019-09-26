@@ -5,25 +5,32 @@
 }
 html,
 body {
-  @extend %wh-100;
-  font-family: "Montserrat", sans-serif;
-  overflow: hidden;
+  @include wh;
+  font-family: $font-base;
 }
 a {
   text-decoration: none;
 }
-input[type="checkbox"] {
-  display: none;
-}
+
+input[type="checkbox"],
 input[type="radio"] {
   display: none;
 }
 
+img{
+  max-width: 100%;
+}
 
-input {
+input,button {
   outline: 0;
 }
-label,
+
 button {
   cursor: pointer;
+}
+
+#main-wrapper {
+  display: flex;
+  flex-direction: column;
+  @include wh;
 }
