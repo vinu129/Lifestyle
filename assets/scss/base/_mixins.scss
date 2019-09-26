@@ -1,24 +1,29 @@
-
 // display flex properties
-@mixin flex($display: flex, $flex-direction: row, $align-items: flex-start, $justify-content: flex-start) {
-  display: $display;
-  flex-direction: $flex-direction;
-  align-items: $align-items;
-  justify-content: $justify-content;
+@mixin flex($flex-direction: row, $align-items: flex-start, $justify-content: flex-start) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
 }
+
 // media queries for responsive designs
 @mixin media-query($screen-size) {
-  $screen: map-get($breakpoints, quote($screen-size));
-  @media (max-width: $screen) {
-    @content;
-  }
+    $screen: map-get($breakpoints, quote($screen-size));
+    @media (max-width: $screen) {
+        @content;
+    }
+}
+
+// media queries for responsive designs
+@mixin wh($width: 100%, $height:100%) {
+    width: $width;
+    height: $height;
 }
 
 @mixin position($position: relative, $top: "", $right: "", $bottom: "", $left: "") {
-  position: $position;
-  top: $top;
-  left: $left;
-  bottom: $bottom;
-  right: $right;
+    position: $position;
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
 }
-
