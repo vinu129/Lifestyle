@@ -1,0 +1,79 @@
+// form and all the input control style goes here
+
+//input controls
+.form-row {
+  @include flex(row, center, center);
+  @include wh(100%, "");
+  @include position(relative);
+  margin-bottom: 35px;
+ 
+}
+.form-control {
+  @include wh(100%, "");
+  @include position(relative);
+  color: $dark;
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: normal;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid lighten($dark, 30%);
+ 
+  &::placeholder {
+    color: $dark;
+    font-family: $font-base;
+    font-weight: normal;
+    text-transform: capitalize;
+    pointer-events: none;
+  }
+  &:focus {
+    padding-left: 5px;
+    & ~ .underline {
+      visibility: visible;
+      width: 100%;
+      left: 0;
+      transition: 0.5s ease all;
+    }
+  }
+  &:focus::placeholder {
+    color: transparent;
+  }
+  &:focus + .custom-icon {
+    transition: 0.5s ease all;
+    @include position(absolute, -15px, "", "", 0);
+  }
+}
+
+.underline {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100px;
+  background-image: linear-gradient(to left, darken($primary, 20%), lighten($dark, 15%));
+}
+
+//button controls
+.btn {
+  padding: 6px 30px;
+  margin: 20px 10px;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 18px;
+  font-family: $font-base;
+  font-weight: normal;
+  color: $white;
+  white-space: nowrap;
+  box-shadow: 0px 0px 0px 3px $dark;
+}
+.btn-dark
+{
+  background-color: $dark;
+  &:hover,
+  &:active {
+    background-color: lighten($dark, 5%);
+    box-shadow: 0px 0px 0px 3px lighten($dark, 20%);
+  }
+}

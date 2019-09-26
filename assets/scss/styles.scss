@@ -4,38 +4,8 @@
 // Project Specific Components
 @import 'components/index';
 
-// Layout style
-@import 'layout/index';
+// Login style
+@import 'layout/login/index';
 
-// Utilities style
+// Utilities styles
 @import 'utilities/index';
-
-// bootstrap functions
-@import "../../node_modules/bootstrap/scss/functions";
-
-// Bootstrap variables
-@import "../../node_modules/bootstrap/scss/variables";
-
-// Bootstrap mixins
-@import "../../node_modules/bootstrap/scss/mixins";
-
-// Bootstrap reset properties
-@import "../../node_modules/bootstrap/scss/reboot"; 
-
-// Bootstrap grid(container ,container-fluid ,row ,col)
-@import "../../node_modules/bootstrap/scss/grid";
-
-// Bootstrap component
-@import "../../node_modules/bootstrap/scss/nav";
-
-// Bootstrap utilities
-@import "../../node_modules/bootstrap/scss/utilities";
-
-//Bootstrap badges
-@import"../../node_modules/bootstrap/scss/badge";
-
-// Bootstrap responsive images
-@import "../../node_modules/bootstrap/scss/images";
-
-// Bootstrap Buttons
-@import "../../node_modules/bootstrap/scss/buttons";

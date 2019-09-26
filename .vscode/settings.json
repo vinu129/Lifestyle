@@ -1,16 +1,10 @@
 {
-        "liveSassCompile.settings.formats": [
-            // This is Default.
-            {
-                "format": "expanded",
-                "extensionName": ".css",
-                "savePath": null
-            },
-            // You can add more
-            {
-                "format": "compressed",
-                "extensionName": ".min.css",
-                "savePath": "/assets/css"
-            }
-        ]
+    "liveSassCompile.settings.formats":[
+        // You can add more
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/assets/css"
+        }
+    ]
 }
