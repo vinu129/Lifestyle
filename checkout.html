@@ -1,0 +1,162 @@
+<!--
+    Created by: Monica Mehta
+    Date: 26/09/2019
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checkout Details</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Link to css -->
+    <link rel="stylesheet" href="./assets/css/styles.min.css">
+</head>
+
+<body>
+    <!-- Checkout-Wrapper -->
+    <div id="checkout-wrapper" class="checkout-wrapper">
+        <!-- Form -->
+        <h5>dummy
+        </h5>
+        <form action="" class="form-details">
+            <h2 class="title">BILLING DETAILS</h2>
+            <!-- Customer Name -->
+            <div class="row">
+                <div class="col">
+                    <div class="input-control">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" class="input-field">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-control">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" class="input-field">
+                    </div>
+                </div>
+            </div>
+            <!-- End: Customer Name -->
+            <!-- State/Country -->
+            <div class="row">
+                <div class="col">
+                    <div class="">
+                        <label for="state-country">State/Country</label>
+                        <select id="state-country">
+                            <option value="france">India</option>
+                            <option value="france">Italy</option>
+                            <option value="france">Japan</option>
+                            <option value="france">France</option>
+                            <option value="france">Hongkong</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- End: State/Country -->
+            <!-- Address -->
+            <div class="row">
+                <label for="s-address">Street Address</label>
+                <div class="input-grp">
+                    <div class="col">
+                        <div class="input-control">
+                            <input type="text" id="s-address" class="input-field" placeholder="House number and street name">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-control">
+                            <input type="text" id="s-address" class="input-field" placeholder="Apartment,suite,unit,etc: (optional)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End: Address -->
+            <!-- Town/City -->
+            <div class="row">
+                <div class="col">
+                    <div class="input-control">
+                        <label for="twn-cty">Town/City</label>
+                        <input type="text" id="twn-cty" class="input-field">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-control">
+                        <label for="p-code">Postcode/ZIP
+                            <sup>*</sup>
+                        </label>
+                        <input type="text" id="p-code" class="input-field">
+                    </div>
+                </div>
+            </div>
+            <!-- End: Town/City -->
+            <!-- Contact-details -->
+            <div class="row">
+                <div class="col">
+                    <div class="input-control">
+                        <label for="phne">Phone</label>
+                        <input type="text" id="phne" class="input-field">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-control">
+                        <label for="email">Email Address</label>
+                        <input type="text" id="email" class="input-field">
+                    </div>
+                </div>
+            </div>
+            <!-- End: Contact-details -->
+            <!-- select-account or shipping -->
+            <div class="final-select">
+                <div class="new-acct">
+                    <input type="radio" name="choice" id="new-account" checked>
+                    <label for="new-account">Create an Account?</label>
+                </div>
+                <div class="shipping">
+                    <input type="radio" name="choice" id="shipping">
+                    <label for="shipping">Ship to different address</label>
+                </div>
+            </div>
+            <!-- End: select-account or shipping -->
+        </form>
+        <!-- End: Form -->
+        <div class="payment-detail">
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">Cart Total</h3>
+                    <div class="cart-total">
+                        djdfhj
+                    </div>
+                </div>
+                <div class="col">
+                    <h2 class="title">Payment Method</h2>
+                    <div class="payment-method">
+                        <div class="payment-input-grp">
+                            <input type="radio" name="method" id="direct-transfer">
+                            <label for="direct-transfer">Direct Bank Transfer</label>
+                        </div>
+                        <div class="payment-input-grp">
+                            <input type="radio" name="method" id="chk-payment">
+                            <label for="chk-payment">Check Payment</label>
+                        </div>
+                        <div class="payment-input-grp">
+                            <input type="radio" name="method" id="paypal" checked>
+                            <label for="new-account">Paypal</label>
+                        </div>
+                        <div class="payment-input-grp">
+                            <input type="checkbox" id="agreement" checked>
+                            <label for="agreement">I have read and accept the terms and conditions</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End: Checkout-Wrapper -->
+</body>
+
+</html>

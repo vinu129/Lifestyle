@@ -24,3 +24,7 @@
   right: $right;
 }
 
+@mixin wh($width: 100%,$height: 100%){
+  width: $width;
+  height: $height;
+}
