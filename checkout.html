@@ -17,14 +17,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Link to css -->
     <link rel="stylesheet" href="./assets/css/styles.min.css">
+    <style>
+        .top-nav {
+            position: relative;
+            top: 0;
+        }
+
+        #main-wrapper {
+            box-shadow: 1px 1px 4px 0 #ccc;
+            padding: 100px 0;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Header here -->
+    <div id="header"></div>
+    <!-- Content-header -->
+    <div class="content-header">
+        <div class="header-title">Checkout Bill</div>
+        <div class="breadcrumbs">
+            <span class="breadcrumb-title">home</span>
+            <span class="breadcrumb-title active">checkout</span>
+        </div>
+    </div>
     <!-- Checkout-Wrapper -->
     <div id="checkout-wrapper" class="checkout-wrapper">
         <!-- Form -->
-        <h5>dummy
-        </h5>
+
         <form action="" class="form-details">
             <h2 class="title">BILLING DETAILS</h2>
             <!-- Customer Name -->
@@ -65,12 +85,14 @@
                 <div class="input-grp">
                     <div class="col">
                         <div class="input-control">
-                            <input type="text" id="s-address" class="input-field" placeholder="House number and street name">
+                            <input type="text" id="s-address" class="input-field"
+                                placeholder="House number and street name">
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-control">
-                            <input type="text" id="s-address" class="input-field" placeholder="Apartment,suite,unit,etc: (optional)">
+                            <input type="text" id="s-address" class="input-field"
+                                placeholder="Apartment,suite,unit,etc: (optional)">
                         </div>
                     </div>
                 </div>
@@ -129,7 +151,24 @@
                 <div class="col">
                     <h3 class="title">Cart Total</h3>
                     <div class="cart-total">
-                        djdfhj
+                        <div class="border-bottom">
+                            <div class="d-flex">
+                                <span class="cart-label">Subtotal</span>
+                                <span class="cart-label">$20.60</span>
+                            </div>
+                            <div class="d-flex">
+                                <span class="cart-label">Delivery</span>
+                                <span class="cart-label">$0.00</span>
+                            </div>
+                            <div class="d-flex">
+                                <span class="cart-label">Discount</span>
+                                <span class="cart-label">$3.00</span>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <span class="cart-label">TOTAL</span>
+                            <span class="total-label">$17.60</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
@@ -152,11 +191,21 @@
                             <label for="agreement">I have read and accept the terms and conditions</label>
                         </div>
                     </div>
+                    <a href="checkout.html" class="btn btn-secondary">Proceed to Checkout</a>
+
                 </div>
             </div>
         </div>
     </div>
     <!-- End: Checkout-Wrapper -->
+    <!-- Footer here -->
+    <div id="footer"></div>
+
+    <!-- link to jquery -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Link to javascript -->
+    <script src="./assets/js/main.js"></script>
+
 </body>
 
 </html>

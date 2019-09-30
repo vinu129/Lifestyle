@@ -1,132 +1,142 @@
 // checkout-details style goes here
 //checkout-wrapper
-.checkout-wrapper{
-    @include flex(column, center, null);
-    margin: 50px 0;
-    .form-details{
-        @include wh(50%, auto);
-        padding: 50px;
-        background-color: lighten($secondary,1%);
-        @include media-query(lg){
-            @include wh(60%, auto);
-        }
-        @include media-query(md){
-            @include wh(70%, auto);
-        }
-        @include media-query(sm){
-            @include wh(90%, auto);
-            padding: 30px;
-        }
+.checkout-wrapper {
+  @include flex(column, center, null);
+  margin: 50px 0;
+  .form-details {
+    @include wh(45%, auto);
+    padding: 50px;
+    background-color: lighten($secondary, 12%);
+    @include media-query(lg) {
+      @include wh(60%, auto);
     }
-        .row:nth-child(3) .col, #state-country{
-            width: 100%;
-            margin-right: 0;
-        }
-        .title{
-            font-weight: 500;
-            margin-bottom: 20px;
-        }
-        .row{
-            font-size: $font-size * 0.9;
-            @include flex(row, null, null);
-            padding: 10px 0;
-            &:nth-child(4){
-                @include flex(column, null, null);
-            }
-            @include media-query(sm){
-                @include flex(column, null, null);
-                padding: 0;
-            }
-.input-grp
-{
-    display: flex;
-}
-        }
-        .col{
-            width: 50%;
-            &:first-child{
-                margin-right: 20px;
-            } 
-            @include media-query(sm){
-                width: 100%;
-                padding: 10px 0;
-            }
-        
-        .input-grp{
-            @include flex(row, null, null);
-            .col{
-                padding: 0;
-            }
-            
-        }
-        .input-control,.input-field{
-            width: 100%;
-        }
-        #fname, #lname,#state-country,#s-address,#twn-cty,#p-code,#phne,#email{
-            padding: 15px;
-            margin-top: 10px;
-        }
-        .final-select{
-            @include flex(row, center, null); 
-            padding: 20px 0;
-            font-size: $font-size * 0.9;
-            .new-acct{
-                margin-right: 20px;
-            }
-        }
-    }  
-    .payment-detail{
-        @include flex(row, null, null); 
-        @include wh(50%, auto);
-        margin-top: 30px;
-        @include media-query(lg){
-            @include wh(60%, auto);
-        }
-        @include media-query(md){
-            @include wh(70%, auto);
-        }
-        @include media-query(sm){
-            @include wh(90%, auto);
-        }
-        .row{
-            @include flex(row, null, null); 
-            @include wh(100%, 100%);
-            @include media-query(sm){
-                @include flex(column, null, null); 
-            }
-        }
-        .col{
-            width: 50%;
-            @include flex(column, null, null); 
-            padding: 20px;
-            margin-bottom: 20px;
-            background-color: lighten($secondary,1%);
-            &:first-child{
-                margin-right: 20px;
-            } 
-            @include media-query(sm){
-                width: 100%;
-            }
-        }
-        .cart-total{
-            @include wh(100%, 100%);
-           
-        }
-        .payment-method{
-            @include wh(100%, 100%);
-            padding: 5px;
-        }
-        .title{
-            text-transform: uppercase;
-            font-weight: 500;
-        }
-        .payment-input-grp{
-            padding: 15px;
-            color: darken($secondary,40%);
-            font-size: $font-size * 0.9;
-        }
-        input{
-            margin-right: 10px;
-        }
+    @include media-query(md) {
+      @include wh(70%, auto);
     }
+    @include media-query(sm) {
+      @include wh(90%, auto);
+      padding: 30px;
+    }
+  }
+  .row:nth-child(3) .col,
+  #state-country {
+    width: 100%;
+    margin-right: 0;
+  }
+  .title {
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .row {
+    font-size: $font-size * 0.9;
+    @include flex(row, null, null);
+    padding: 10px 0;
+    &:nth-child(4) {
+      @include flex(column, null, null);
+    }
+    @include media-query(sm) {
+      @include flex(column, null, null);
+      padding: 0;
+    }
+    .input-grp {
+      display: flex;
+      width: 100%;
+    }
+  }
+  .col {
+    width: 50%;
+   
+    &:first-child {
+      margin-right: 20px;
+    }
+    @include media-query(sm) {
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    .input-grp {
+      @include flex(row, null, null);
+      .col {
+        padding: 0;
+      }
+    }
+    .input-control,
+    .input-field {
+      width: 100%;
+    }
+    #fname,
+    #lname,
+    #state-country,
+    #s-address,
+    #twn-cty,
+    #p-code,
+    #phne,
+    #email {
+      padding: 15px;
+      margin-top: 10px;
+    }
+
+  }
+  .payment-detail {
+    @include flex(row, null, null);
+    @include wh(45%, auto);
+    margin-top: 30px;
+    @include media-query(lg) {
+      @include wh(60%, auto);
+    }
+    @include media-query(md) {
+      @include wh(70%, auto);
+    }
+    @include media-query(sm) {
+      @include wh(90%, auto);
+    }
+    .row {
+      @include flex(row, stretch, null);
+      @include wh(100%, 100%);
+      @include media-query(sm) {
+        @include flex(column, null, null);
+      }
+    }
+    .col {
+      width: 50%;
+      @include flex(column, null, null);
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: lighten($secondary, 12%);
+      &:first-child {
+        margin-right: 20px;
+      }
+      @include media-query(sm) {
+        width: 100%;
+      }
+    }
+    .cart-total {
+      @include wh(100%, 100%);
+    }
+    .payment-method {
+      @include wh(100%, 100%);
+      padding: 5px;
+    }
+    .title {
+      text-transform: uppercase;
+      font-weight: 500;
+      text-align: left;
+    }
+    .payment-input-grp {
+      padding: 15px;
+      color: darken($secondary, 40%);
+      font-size: $font-size * 0.9;
+    }
+    input {
+      margin-right: 10px;
+    }
+  }
 }
+    .final-select {
+      @include flex(row, center, "");
+      padding: 20px 0;
+      font-size: $font-size * 0.9;
+      .new-acct {
+        margin-right: 20px;
+      }
+    }

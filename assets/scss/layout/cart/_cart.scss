@@ -89,7 +89,8 @@
 }
 
 .d-flex {
-  @include flex();
+  @include flex(row,center,space-between);
+  margin-right: 40px;
   padding: 15px 0;
 }
 
@@ -99,10 +100,12 @@
 
 .total-box {
   @include wh(40%, "");
+  @include flex(column);
   @include media-query(sm) {
     @include wh(100%, "");
   }
   .box-border {
+    width: 100%;
     border: 1px solid $secondary;
     padding: 20px;
     margin-bottom: 20px;

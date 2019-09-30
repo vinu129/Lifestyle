@@ -491,6 +491,7 @@
   .social-media {
     margin-top: 50px;
     @include flex(row);
+    cursor: pointer;
     .media-icons {
       margin: 0 10px;
       width: 42px;
