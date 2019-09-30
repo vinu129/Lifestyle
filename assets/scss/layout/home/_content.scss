@@ -4,7 +4,7 @@
 .top-nav {
   @include wh(100%, $nav-height);
   @include flex(row, center);
-  transition: 0.3s all ease-in-out;
+
   z-index: 5;
   // background-color: transparent;
   position: fixed;
@@ -16,12 +16,19 @@
     letter-spacing: 3px;
     color: $dark;
   }
+  #nav-toggle{
+    display: none;
+    &:checked ~ .nav{
+    display: flex;
+  }
+  }
   .nav {
     @include wh(auto, 100%);
     @include flex(row, center);
     margin-left: auto;
     font-size: 16px;
     font-weight: 400;
+
 
     @include media-query(md) {
       flex-direction: column;
@@ -43,6 +50,8 @@
       width: 100%;
       margin: 15px;
       padding: 0 10px;
+      height: auto;
+      justify-content: center;
     }
   }
   .nav-icon {
@@ -182,6 +191,7 @@
   text-transform: uppercase;
   font-family: "Roboto Condensed", sans-serif;
   letter-spacing: 6px;
+  color: $dark;
 }
 .heading-shadow {
   position: absolute;
