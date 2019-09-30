@@ -17,11 +17,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Link to css -->
     <link rel="stylesheet" href="./assets/css/styles.min.css">
+    <style>
+        .top-nav {
+           position: relative;
+            top: 0;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Header here -->
     <div id="header"></div>
+    <!-- Content-header -->
+    <div class="content-header">
+        <div class="header-title">Products details</div>
+        <div class="breadcrumbs">
+            <span class="breadcrumb-title">home</span>
+            <span class="breadcrumb-title">Product</span>
+            <span class="breadcrumb-title active">detail</span>
+        </div>
+    </div>
     <!-- Product-Details -->
     <div id="product-details-wrapper" class="product-details-wrapper">
         <!-- Row -->
@@ -66,7 +81,7 @@
                         <input type="number" min="1" max="9" step="1" value="1" class="qty">
                     </div>
                     <div class="cart">
-                        <a href="#" class="add-btn">Add to Cart</a>
+                        <a href="cart.html" class="add-btn">Add to Cart</a>
                     </div>
                 </div>
                 <!-- End: Product-Description -->

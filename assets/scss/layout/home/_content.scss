@@ -1,80 +1,81 @@
 .site-content {
   @include wh;
 }
- .top-nav {
-    @include wh(100%, $nav-height);
+.top-nav {
+  @include wh(100%, $nav-height);
+  @include flex(row, center);
+  transition: 0.3s all ease-in-out;
+  z-index: 5;
+  // background-color: transparent;
+  position: fixed;
+  .brand-name {
+    margin-left: 15%;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: $dark;
+  }
+  .nav {
+    @include wh(auto, 100%);
     @include flex(row, center);
-    transition: 0.3s all ease-in-out;
-    z-index: 2;
-    // background-color: transparent;
-    position: fixed;
-    .brand-name {
-      margin-left: 15%;
-      text-transform: uppercase;
-      font-size: 25px;
-      font-weight: 300;
-      letter-spacing: 3px;
-    }
-    .nav {
-      @include wh(auto, 100%);
-      @include flex(row, center);
-      margin-left: auto;
-      font-size: 16px;
-      font-weight: 400;
+    margin-left: auto;
+    font-size: 16px;
+    font-weight: 400;
 
-      @include media-query(md) {
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        top: 60px;
-        background-color: #fff;
-        height: auto;
-        display: none;
-      }
-    }
-    .nav-link {
-      padding: 0 15px;
-      color: $dark;
-      height: 100%;
-      @include flex(row, center);
-
-      @include media-query(md) {
-        width: 100%;
-        margin: 15px;
-        padding: 0 10px;
-      }
-    }
-    .nav-icon {
-      padding-left: 2px;
-      position: relative;
-      &::after {
-        content: "";
-        padding: 3px;
-        border-radius: 50%;
-        background-color: darken($primary, 10%);
-        font-size: 10px;
-        @include position(absolute, -2px, -4px, " ", " ");
-      }
-    }
-    .login-btn {
-      margin: 0 20px;
-      @include media-query(md) {
-        width: 80%;
-        margin: 10px 30px;
-        z-index: 10;
-      }
-    }
-
-    .navbar-toggle {
+    @include media-query(md) {
+      flex-direction: column;
+      position: absolute;
+      width: 100%;
+      top: 60px;
+      background-color: #fff;
+      height: auto;
       display: none;
-      margin-left: auto;
-      margin-right: 20px;
-      font-size: 18px;
-      @include media-query(md) {
-        display: inline-block;
-      }
     }
   }
+  .nav-link {
+    padding: 0 15px;
+    color: $dark;
+    height: 100%;
+    @include flex(row, center);
+
+    @include media-query(md) {
+      width: 100%;
+      margin: 15px;
+      padding: 0 10px;
+    }
+  }
+  .nav-icon {
+    padding-left: 2px;
+    position: relative;
+    &::after {
+      content: "";
+      padding: 3px;
+      border-radius: 50%;
+      background-color: darken($primary, 10%);
+      font-size: 10px;
+      @include position(absolute, -2px, -4px, " ", " ");
+    }
+  }
+  .login-btn {
+    margin: 0 20px;
+    @include media-query(md) {
+      width: 80%;
+      margin: 10px 30px;
+      z-index: 10;
+    }
+  }
+
+  .navbar-toggle {
+    display: none;
+    margin-left: auto;
+    margin-right: 20px;
+    font-size: 18px;
+    @include media-query(md) {
+      display: inline-block;
+    }
+  }
+}
 #home-page {
   @include wh(100%, 100vh);
   @include flex(column);
@@ -94,7 +95,6 @@
     background-color: rgba($primary, 0.9);
   }
 
- 
   .main-content {
     @include wh;
     @include flex(column, center, center);
@@ -138,11 +138,28 @@
       @include wh(60px, 60px);
       background-color: $white;
       color: $dark;
-      @include flex(row, center, center);
-      font-size: 20px;
+      @include flex(row, start, center);
+      font-size: 25px;
+      padding-top: 10px;
       border-radius: 50%;
       position: absolute;
       bottom: 15%;
+      .mouse-arrow {
+        -webkit-animation: rotation 2s infinite ease-in-out;
+
+        color: $dark;
+      }
+
+      @-webkit-keyframes rotation {
+        from {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        to {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+      }
     }
   }
 }
@@ -179,7 +196,8 @@
   }
 }
 
-#trending ,#products{
+#trending,
+#products {
   @include wh(100%, auto);
   @include flex(column, center, start);
 
@@ -195,6 +213,7 @@
         display: none;
       }
     }
+   
   }
 
   .card {
@@ -275,13 +294,13 @@
     }
   }
 }
-#products{
-  @include wh(100%,110vh);
-   background-color: lighten($secondary, 10%);
-   .view-btn{
-     margin-top: 50px;
-     padding: 10px 30px;
-   }
+#products {
+  @include wh(100%, 110vh);
+  background-color: lighten($secondary, 10%);
+  .view-btn {
+    margin-top: 50px;
+    padding: 10px 30px;
+  }
 }
 #about {
   @include wh(100%, auto);
@@ -329,7 +348,7 @@
       width: 80%;
       margin: 20px 0 0 0;
     }
-    .content-header {
+    .content-title {
       font-size: 70px;
       text-transform: uppercase;
       font-weight: 400;
@@ -391,7 +410,6 @@
     background-color: $white;
     @include media-query(lg) {
       width: 90%;
-     
     }
     @include media-query(md) {
       @include flex(column);

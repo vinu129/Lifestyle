@@ -1,92 +1,164 @@
 //product style goes here
-.main-wrapper{
-    padding: 150px 0;
-    background-color: lighten($secondary,10%);
-    overflow: auto;
-    .row{
-        @include flex(row, null, center);
-        flex-wrap: wrap;
+.main-wrapper {
+  padding: 150px 0;
+  background-color: lighten($secondary, 10%);
+  overflow: auto;
+
+  .row {
+    @include flex(row, null, center);
+    flex-wrap: wrap;
+  }
+  .col {
+    @include flex(row, null, center);
+    margin-bottom: 35px;
+  }
+  .card {
+    margin: 0 19px;
+    @include flex(column, null, null);
+    width: 300px;
+    height: 665px;
+    background-color: $white;
+  }
+  .img-p {
+    position: relative;
+    @include flex(column, null, null);
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    .product-img {
+      height: 100%;
+      width: 100%;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
-    .col{
-        @include flex(row, null, center);
-        margin-bottom: 35px;
+    .status {
+      @include position(absolute, 20px, null, null);
+      border: 1px solid transparent;
+      background-color: $primary;
+      padding: 5px 20px;
+      top: 10px;
+      color: $dark;
     }
-    .card{
-        margin: 0 19px;
-        @include flex(column, null, null);
-        width: 300px;
-        height: 665px;
-        background-color: $white;
+  }
+  .prod-detail {
+    padding: 15px;
+    .prod-name {
+      color: $dark;
+      font-size: $font-size;
     }
-    .img-p{
-        position: relative;
-        @include flex(column, null, null);
-        height: 500px;
-        width: 100%;
-        overflow: hidden;
-        .product-img{
-            height: 100%; 
-            width: 100%;
-            transition: all .3s ease-in-out;
-            &:hover{
-                transform: scale(1.1);
-            }
-        }
-        .status{
-            @include position(absolute,20px,null,null);
-            border: 1px solid transparent;
-            background-color: $primary;
-            padding: 5px 20px;
-            top: 10px;
-            color: $dark;
-        }
+    .pricing-detail {
+      @include flex(row, null, space-between);
+      padding: 10px 0 20px;
+      border-bottom: 1px solid lighten($dark, 80%);
+      font-size: $font-size * 0.9;
+      .old-price {
+        text-decoration: line-through;
+        color: lighten($dark, 80%);
+      }
+      .rate {
+        color: $primary;
+      }
     }
-    .prod-detail{
-        padding: 15px;
-        .prod-name{
-            color: $dark;
-            font-size: $font-size;
-        }
-        .pricing-detail{
-            @include flex(row, null, space-between);
-            padding: 10px 0 20px;
-            border-bottom: 1px solid lighten($dark,80%);
-            font-size: $font-size * 0.9;
-            .old-price{
-                text-decoration: line-through;
-                color: lighten($dark,80%);
-            }
-            .rate{
-                color: $primary;
-            }
-        }
-        .add-to-cart{
-            @include flex(row, null, space-between);
-            padding: 20px 0;
-            font-size: $font-size * 0.9;
-            span{
-                color: $dark;
-            }
-        }
+    .add-to-cart {
+      @include flex(row, null, space-between);
+      padding: 20px 0;
+      font-size: $font-size * 0.9;
+      span {
+        color: $dark;
+      }
     }
-    .pagination{
-        margin: 50px 0;
-        @include flex(row, null, center);
-        .page{
-            color: $primary;
-            text-align: center;
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            border-radius: 50%;
-            border: 1px solid $primary;
-            margin: 0 2px 5px;
-            &:hover,
-            &.active{
-                background-color: $primary;
-                color: $white;
-            }
-        }
+  }
+  .pagination {
+    margin: 50px 0;
+    @include flex(row, null, center);
+    .page {
+      color: $primary;
+      text-align: center;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      border: 1px solid $primary;
+      margin: 0 2px 5px;
+      &:hover,
+      &.active {
+        background-color: $primary;
+        color: $white;
+      }
     }
+  }
+}
+.sub-header {
+  @include wh(100%, 60px);
+  background-color: lighten($secondary, 10%);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    @include media-query(md) {
+        height: auto;
+    }
+  #secondary-nav {
+    @include wh;
+    @include flex(row, center);
+    padding: 0 20px 0 50px;
+      @include media-query(md) {
+          flex-direction: column;
+      }
+    li {
+      &:nth-child(8) {
+        margin-left: auto;
+          @include media-query(md) {
+              margin-left: 0;
+          }
+      }
+    }
+    .nav-btn {
+      font-size: 15px;
+      color: darken($secondary, 20%);
+      &:hover{
+          color: $dark;
+      }
+    }
+    .active .nav-btn {
+      color: $dark;
+    }
+    .search-box {
+      height: 35px;
+      width: 20%;
+      @include flex(row);
+      position: relative;
+      box-shadow: 1px 1px 6px #ccc;
+      
+    }
+    .search-icon {
+      @include flex(row, center, center);
+      height: 100%;
+      color: $white;
+      background-color: $primary;
+      padding: 0 10px;
+      border: 1px solid $primary;
+
+      position: absolute;
+      left: 0;
+    }
+    #search {
+      @include wh;
+      background-color: $white;
+      border: 0;
+      padding-left: 45px;
+      &::placeholder {
+        color: darken($secondary, 10%);
+      }
+    }
+    .filter {
+      border: 0;
+      height: 35px;
+      padding: 0 15px;
+      margin: 0 20px;
+      outline: 0;
+      color: darken($primary, 20%);
+       box-shadow: 1px 1px 6px #ccc;
+    }
+  }
 }
